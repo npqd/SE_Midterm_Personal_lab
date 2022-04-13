@@ -1,52 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRM</title>
-    <link rel="stylesheet" 
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-    crossorigin="anonymous">
-    <style>
-		
-		#logo{
-		}
+	<title>CRM</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-		body{
-			background-color: #ebeff5;
-		}
+	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
 
-
-		#total-orders{
-			background-color: #4cb4c7;
-		}
-
-
-		#orders-delivered{
-			background-color: #7abecc;
-		}
-
-		#orders-pending{
-			background-color: #7CD1C0;
-		}
-
-
-
-
-	</style>
 </head>
 <body>
-    {% include 'accounts/navbar.html' %}
-    {% block content %}
+	{%  include 'accounts/navbar.html' %}
+	<div class="container-fluid">
+	{% block content %}
 
-    {% endblock %}
 
-    <hr>
-    <h5>
-        Our footer
-    </h5>
+
+	{% endblock %}
+    </div>
+	<hr>
+	<h5>Our footer</h5>
+	
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
